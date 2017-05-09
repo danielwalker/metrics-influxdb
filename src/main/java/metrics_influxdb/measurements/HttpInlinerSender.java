@@ -55,8 +55,7 @@ public class HttpInlinerSender extends QueueableSender {
 			con.setConnectTimeout(Long.valueOf(TimeUnit.SECONDS.toMillis(2)).intValue());
 			con.setReadTimeout(Long.valueOf(TimeUnit.SECONDS.toMillis(2)).intValue());
 
-			// Send post request
-			con.setDoOutput(true);
+			// Send post request			
 			OutputStream wr = con.getOutputStream();
 			String measuresAsString = inliner.inline(measures);
 
